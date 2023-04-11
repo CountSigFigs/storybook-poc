@@ -31,7 +31,7 @@ const buttonBaseStyles = css`
 `;
 
 const buttonLightStyles = css`
-  color: #FFF;
+  color: pink;
   background-color: #000000;
 `;
 

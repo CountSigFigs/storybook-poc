@@ -38,6 +38,10 @@ const buttonLightStyles = css`
 const buttonDarkStyles = css`
   color: #000000;
   background-color: #FFF;
+  &:disabled {
+    background-color: green;
+    color: #C4C4C4;
+  }
 `;
 
 const logoStyles = css`

@@ -6,7 +6,7 @@ import skipifyLogo from './assets/skipify-logo.png';
 
 const buttonBaseStyles = css`
   font-family: 'Poppins';
-  font-weight: 600;
+  font-weight: 800;
   border: 0;
   border-radius: 4px;
   cursor: pointer;

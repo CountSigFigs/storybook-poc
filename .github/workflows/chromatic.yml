@@ -4,11 +4,12 @@
 name: 'Chromatic'
 
 # Event for the workflow
-on: 
-  pull_request:
+  # Chromatic needs the commit sha of master to use as image base for comparisons
+  push:
     branches:
-      - main
-
+      - master
+  pull_request:
+    types: [opened]
 # List of jobs
 jobs:
   chromatic-deployment:

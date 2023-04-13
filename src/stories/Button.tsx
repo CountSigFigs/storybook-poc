@@ -39,7 +39,7 @@ const buttonDarkStyles = css`
   color: #000000;
   background-color: #FFF;
   &:disabled {
-    background-color: green;
+    background-color: blue;
     color: #C4C4C4;
   }
 `;

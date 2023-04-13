@@ -6,7 +6,7 @@ import skipifyLogo from './assets/skipify-logo.png';
 
 const buttonBaseStyles = css`
   font-family: 'Poppins';
-  font-weight: 800;
+  font-weight: 600;
   border: 0;
   border-radius: 4px;
   cursor: pointer;
@@ -38,6 +38,10 @@ const buttonLightStyles = css`
 const buttonDarkStyles = css`
   color: #000000;
   background-color: #FFF;
+  &:disabled {
+    background-color: blue;
+    color: #C4C4C4;
+  }
 `;
 
 const logoStyles = css`

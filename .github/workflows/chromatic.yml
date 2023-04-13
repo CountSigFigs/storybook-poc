@@ -2,14 +2,15 @@
 
 # Workflow name
 name: 'Chromatic'
-
 # Event for the workflow
+on:
   # Chromatic needs the commit sha of master to use as image base for comparisons
   push:
     branches:
       - master
+  # Only run if the PR contains changes to frontend/**
   pull_request:
-    types: [opened]
+    types: [opened, synchronize]
 # List of jobs
 jobs:
   chromatic-deployment:

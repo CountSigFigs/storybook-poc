@@ -3,7 +3,6 @@
 # Workflow name
 name: 'Chromatic'
 # Event for the workflow
-# Chromatic needs the commit sha of master to use as image base for comparisons
 on:
   # Chromatic needs the commit sha of master to use as image base for comparisons
   push:

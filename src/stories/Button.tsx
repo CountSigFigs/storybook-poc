@@ -36,7 +36,7 @@ const buttonLightStyles = css`
 `;
 
 const buttonDarkStyles = css`
-  color: #000000;
+  color: purple;
   background-color: #FFF;
   &:disabled {
     background-color: blue;

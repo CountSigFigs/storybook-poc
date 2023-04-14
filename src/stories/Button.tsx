@@ -2,54 +2,58 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-import skipifyLogo from './assets/skipify-logo.png';
+import skipifyLogo from './assets/Button-text-light.svg';
+import darkModeSkipifyLogo from './assets/Button-text-dark.svg';
 
 const buttonBaseStyles = css`
-  font-family: 'Poppins';
-  font-weight: 600;
-  border: 0;
-  border-radius: 4px;
+  border: 2px;
+  border-radius: 60px;
   cursor: pointer;
-  line-height: 19px;
-  font-size: 19px;
-  height: 53.93px;
-  min-width: 293.63px;
+  height: 52px;
+  width: 209px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:disabled {
     cursor: auto;
+    border: none;
+
+    img {
+      filter: invert(56%) sepia(28%) saturate(0%) hue-rotate(136deg) brightness(123%) contrast(114%);
+    }
   }
   &:focus {
     outline: none !important;
     box-shadow: 0 0 4px rgba(1, 234, 211, 0.9);
   }
-  &:hover {
-    background-color: #444444;
-  }
-  &:disabled {
-    background-color: #F3F3F3;
-    color: #C4C4C4;
-  }
 `;
 
 const buttonLightStyles = css`
-  color: #FFF;
   background-color: #000000;
+  &:hover {
+    background-color: #444444;
+    border: 2px solid #000000;
+  }
+  &:disabled {
+    background-color: #F3F3F3;
+    border: none;
+  }
 `;
 
 const buttonDarkStyles = css`
-  color: #000000;
   background-color: #FFF;
+  &:hover {
+    background-color: #F3F3F3;
+  }
   &:disabled {
-    background-color: blue;
-    color: #C4C4C4;
+    background-color: #FEFEFE;
+    border: 1px solid #F3F3F3;
   }
 `;
 
 const logoStyles = css`
-  height: 18.98px;
-  width: 19.24px;
-  margin-right: 8px;
-  position: relative;
-  top: 2px;
+  height: 19px;
+  margin-top: 4px;
 `;
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
@@ -70,8 +74,11 @@ export const Button = ({
       css={[buttonBaseStyles, mode]}
       {...props}
     >
-      <img src={skipifyLogo} css={logoStyles} alt='skipify' />
-      Buy Now
+      <img 
+        src={variant === 'dark' ? darkModeSkipifyLogo : skipifyLogo} 
+        alt='Pay now'
+        css={logoStyles}
+      />
     </button>
   );
 };
